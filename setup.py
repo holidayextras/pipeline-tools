@@ -19,7 +19,7 @@ setup(
     description='Tools necessary for a pipeline project',
     long_description=long_description,
     # The project's main homepage.
-    url='',
+    url='https://github.com/holidayextras/pipeline-tools',
 
     # Author details
     author='HX',
