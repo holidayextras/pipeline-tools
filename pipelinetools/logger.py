@@ -8,7 +8,8 @@ if __name__ != '__main__':
     import __main__
     if '__file__' in dir(__main__):
         if 'unittest' not in __main__.__file__:
-            WORKING_DIR = WORKING_DIR[:-14]
+            print('no __file__ using os.getcwdu')
+            WORKING_DIR = os.getcwdu()
 CONFIG_FILE = WORKING_DIR + "/config"
 
 #  to enable testing we should make a dynamic path available
