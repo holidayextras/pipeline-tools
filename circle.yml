@@ -1,0 +1,12 @@
+machine:
+  python:
+    version: 2.7.10
+
+dependencies:
+  pre:
+    - pip install -r requirements.txt --upgrade
+
+test:
+  override:
+    - pep8 *.py
+    - python -m unittest discover -s circlestatus/test
