@@ -6,11 +6,13 @@ WORKING_DIR = os.path.abspath(os.path.dirname(__file__))
 
 if __name__ != '__main__':
     import __main__
+    print('----------> 2')
     if '__file__' in dir(__main__):
+        print('----------> 2')
         if 'unittest' not in __main__.__file__:
             print('no __file__ using os.getcwdu')
             WORKING_DIR = os.getcwdu()
-CONFIG_FILE = WORKING_DIR + "/config"
+CONFIG_FILE = os.getcwdu() + "/config"
 
 #  to enable testing we should make a dynamic path available
 config = ConfigParser()
