@@ -3,10 +3,15 @@ import os
 from ConfigParser import ConfigParser
 
 WORKING_DIR = os.path.abspath(os.path.dirname(__file__))
+print(WORKING_DIR)
 if __name__ != '__main__':
     import __main__
     WORKING_DIR = os.path.abspath(os.path.dirname(__main__.__file__))
+    if 'unittest' in WORKING_DIR:
+        WORKING_DIR = os.path.abspath(os.path.dirname(__file__))
 CONFIG_FILE = WORKING_DIR + "/config"
+
+print(CONFIG_FILE)
 
 #  to enable testing we should make a dynamic path available
 config = ConfigParser()
