@@ -5,6 +5,6 @@ A simple solution is to create a tools package to be able to install into any pr
 by simply adding it into a requirements.txt file.
 
 ## Current tools
-    - #Logging
-    Be able to pass configs into this tool and instantiate a logger class with
+    #Logging
+    - Be able to pass configs into this tool and instantiate a logger class with
     all the setup already taken care of
