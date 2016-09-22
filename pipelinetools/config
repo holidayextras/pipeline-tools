@@ -1,0 +1,7 @@
+[DEFAULT]
+log_name=pipelinetool
+log_level=DEBUG
+
+[override]
+log_name=pipelinetool
+log_level=DEBUG
