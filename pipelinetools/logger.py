@@ -9,10 +9,13 @@ def check_config():
     if __name__ != '__main__':
         import __main__
         if '__file__' not in dir(__main__):
+            print('----> 1')
             return CONFIG_FILE
         elif ('unittest' in __main__.__file__) or ('pycharm' in __main__.__file__):
+            print('----> 2')
             return CONFIG_FILE
         else:
+            print('----> 3')
             CONFIG_FILE = os.path.abspath(os.path.dirname(__main__.__file__))\
                           + '/config'
     return CONFIG_FILE
@@ -33,6 +36,7 @@ def console_handler(log_level):
     return ch
 
 CONFIG_FILE = check_config()
+print(CONFIG_FILE)
 
 #  to enable testing we should make a dynamic path available
 config = ConfigParser()
