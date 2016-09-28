@@ -22,5 +22,5 @@ class TestGenerator(unittest.TestCase):
         self.mox.UnsetStubs()
 
     def test_config(self):
-        result = pl.init_a_logger()
+        result = pl.init_a_logger('pipelinetool', 'DEBUG')
         self.assertEqual(result.name, 'pipelinetool')
